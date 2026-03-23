@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="page">
-<header class="header">
+      <header class="header header-catalog">
         <div class="container header__container">
           <div class="header__info">
             <div class="header__info-row">
@@ -31,13 +31,13 @@
             <div class="header__info-right">
               <div class="header__actions">
                 <label class="header__search">
-                  <span class="visually-hidden">Поиск</span>
+                  <span class="visually-hidden">Поиск...</span>
                   <input type="text" placeholder="Поиск" />
-                  <img src="assets/img/search.png" alt="" width="16" height="16" />
+                  <img src="assets/img/search.png" alt="" width="25" height="25" />
                 </label>
                 <a class="header__login" href="#">
                   <span>Вход</span>
-                  <img src="assets/img/login.png" alt="" width="16" height="16" />
+                  <img src="assets/img/login.png" alt="" width="35" height="35" />
                 </a>
               </div>
             </div>
@@ -59,7 +59,7 @@
                     <a href="#">Вакансии</a>
                   </div>
                 </div>
-                <a href="#">Продукция</a>
+                <a href="catalog.html">Продукция</a>
                 <a href="#">Сотрудничество</a>
                 <a href="#">Услуги</a>
               </nav>
@@ -71,7 +71,7 @@
               </nav>
             </div>
             <a class="header__logo" href="/">
-              <img src="assets/img/logo.png" alt="Еврообсада" width="202" height="127" />
+              <img src="assets/img/logo.png" alt="Еврообсада" width="244" height="164" />
             </a>
             <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false">
               <span></span>
@@ -168,14 +168,14 @@
 
                 <div class="catalog-filter__actions">
                   <button class="catalog-filter__apply" type="button">Применить</button>
-                  <button class="catalog-filter__reset" type="button">×</button>
+                  <button class="catalog-filter__reset" type="button">?</button>
                 </div>
               </aside>
 
               <div class="catalog-content">
                 <div class="catalog-sort">
                   <div class="catalog-sort__label">
-                    Сортировать по: <button class="catalog-sort__btn" type="button" data-sort="asc">Цена <span class="catalog-sort__icon">↑</span></button>
+                    Сортировать по: <button class="catalog-sort__btn" type="button" data-sort="asc">Цена <span class="catalog-sort__icon"></span></button>
                   </div>
                   <div class="catalog-sort__show">
                     Показать:
@@ -363,6 +363,33 @@
             </div>
           </div>
         </section>
+
+        <section class="callback">
+          <div class="container">
+            <div class="callback__box">
+              <button class="callback__close" type="button" aria-label="Закрыть">
+                <img src="assets/img/cross-form.png" alt="" width="16" height="16" />
+              </button>
+              <h2 class="callback__title">Обратный звонок</h2>
+              <form class="callback__form" action="#" method="post">
+                <label class="callback__field">
+                  <img src="assets/img/form-icon-1.png" alt="" width="30" height="30" />
+                  <input type="text" name="name" placeholder="Ваше ФИО" />
+                </label>
+                <label class="callback__field">
+                  <img src="assets/img/form-icon-2.png" alt="" width="20" height="20" />
+                  <input type="tel" name="phone" placeholder="Телефон" />
+                </label>
+                <label class="callback__check">
+                  <input type="checkbox" checked />
+                  <span class="callback__check-box"></span>
+                  <span>Принимаю политику конфиденциальности</span>
+                </label>
+                <button class="callback__submit" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
 <footer class="footer">
         <div class="container footer__row">
@@ -372,7 +399,7 @@
 
           <nav class="footer__nav" aria-label="Навигация в подвале">
             <a href="#">О компании</a>
-            <a href="#">Продукция</a>
+            <a href="catalog.html">Продукция</a>
             <a href="#">Наши работы</a>
             <a href="#">Услуги</a>
             <a href="#">Производство</a>
@@ -408,3 +435,5 @@
     ?> -->
   </body>
 </html>
+
+
