@@ -1605,8 +1605,8 @@ select {
 .catalog-page__layout::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: -316px;
+  bottom: -50px;
   left: 50%;
   margin-left: -50vw;
   width: 420px;
@@ -1751,7 +1751,7 @@ select {
 .catalog-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 39px;
 }
 
 .catalog-sort {
@@ -1759,7 +1759,7 @@ select {
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  color: var(--color-text-dark);
+  color: #828282;
   text-transform: uppercase;
 }
 
@@ -1802,7 +1802,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   margin-left: 8px;
-  padding: 16px 36px 16px 16px;
+  padding: 16px 36px 16px 20px;
   border: 1px solid var(--color-gray-300);
   background: var(--color-bg) url("../img/arrow-sm.png") right 12px center / 10px 6px no-repeat;
   font-size: 16px;
@@ -1962,13 +1962,13 @@ border: 1px solid #e8e8e8;
 .futures__header {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: 40px;
+  gap: 50px;
   align-items: start;
 }
 
 .futures__title {
   margin: 0;
-  font-size: 32px;
+  font-size: 64px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-text-dark);
@@ -1976,9 +1976,9 @@ border: 1px solid #e8e8e8;
 }
 
 .futures__text {
-  font-size: 12px;
+  font-size: 20px;
   color: var(--color-text-dark);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .futures__text p {
