@@ -31,7 +31,7 @@ if (newsSlider && window.Swiper) {
   // Инициализация Swiper для новостей
   new Swiper(newsSlider, {
     slidesPerView: "auto",
-    spaceBetween: 24,
+    spaceBetween: 50,
     loop: true,
     speed: 600,
     observer: true,
@@ -393,6 +393,57 @@ if (catalogPage) {
 
   // Первый рендер каталога
   update();
+}
+
+// Маска телефона для полей с data-phone-mask
+const phoneInputs = document.querySelectorAll('input[data-phone-mask]');
+
+if (phoneInputs.length) {
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+    let result = "";
+
+    if (digits.length === 0) {
+      return "";
+    }
+
+    const first = digits[0] === "8" ? "8" : "+7";
+    result += first;
+
+    const rest = digits[0] === "8" ? digits.slice(1) : digits.slice(0);
+
+    if (rest.length > 0) {
+      result += " (" + rest.slice(0, 3);
+    }
+    if (rest.length >= 3) {
+      result += ")";
+    }
+    if (rest.length > 3) {
+      result += " " + rest.slice(3, 6);
+    }
+    if (rest.length > 6) {
+      result += "-" + rest.slice(6, 8);
+    }
+    if (rest.length > 8) {
+      result += "-" + rest.slice(8, 10);
+    }
+
+    return result;
+  };
+
+  phoneInputs.forEach((input) => {
+    const onInput = (event) => {
+      const { value } = event.target;
+      event.target.value = formatPhone(value);
+    };
+
+    const onBlur = (event) => {
+      event.target.value = formatPhone(event.target.value);
+    };
+
+    input.addEventListener("input", onInput);
+    input.addEventListener("blur", onBlur);
+  });
 }
 
 
